@@ -10,8 +10,11 @@ public class App
         Customer bob = new Customer();
         bob.setCid(101);
         bob.setName("bob");
+        bob.setLname("lama");
 
         Configuration con = new Configuration().configure().addAnnotatedClass(Customer.class);
+
+
         SessionFactory sf = con.buildSessionFactory();
         Session session = sf.openSession();
 
